@@ -12,7 +12,7 @@ contract Ballot {
         startTime = _startTimeKeep;
     }
     modifier voteEnded() {
-        require(startTime + 60 seconds >= block.timestamp, "Voting period has ended!");
+        require(startTime + 300 seconds >= block.timestamp, "Voting period has ended!");
         _;
     }
 
